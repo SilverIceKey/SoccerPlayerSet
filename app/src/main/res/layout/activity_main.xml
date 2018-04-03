@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sk.zhouwj.fieldplayerview.MainActivity">
+
+    <Button
+        android:id="@+id/add_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加球员" />
+
+    <TextView
+        android:id="@+id/playerxp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/add_player"
+        android:layout_alignTop="@+id/add_player"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/add_player"
+        android:gravity="center"
+        android:text="X:0%" />
+
+    <TextView
+        android:id="@+id/playeryp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/playerxp"
+        android:layout_alignTop="@+id/playerxp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/playerxp"
+        android:gravity="center"
+        android:text="Y:0%" />
+    <TextView
+        android:id="@+id/player_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/playeryp"
+        android:layout_alignTop="@+id/playeryp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/playeryp"
+        android:gravity="center"
+        android:text="位置:未知" />
+
+    <FrameLayout
+        android:id="@+id/field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_player">
+
+        <ImageView
+            android:id="@+id/field_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/zqc_half" />
+    </FrameLayout>
+</RelativeLayout>
