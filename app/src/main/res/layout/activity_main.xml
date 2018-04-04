@@ -33,6 +33,7 @@
         android:layout_toRightOf="@+id/playerxp"
         android:gravity="center"
         android:text="Y:0%" />
+
     <TextView
         android:id="@+id/player_position"
         android:layout_width="wrap_content"
@@ -44,7 +45,7 @@
         android:gravity="center"
         android:text="位置:未知" />
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,8 +54,15 @@
         <ImageView
             android:id="@+id/field_bg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/zqc_half" />
-    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/players_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/field_bg"
+            android:layout_alignTop="@+id/field_bg" />
+    </RelativeLayout>
 </RelativeLayout>
